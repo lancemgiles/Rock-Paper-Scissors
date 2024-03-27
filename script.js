@@ -1,8 +1,11 @@
+let playerChoice = "rock";
+
 function getComputerChoice() {
 	const choice = ['rock', 'paper', 'scissors'];
 	const random = Math.floor(Math.random() * choice.length);
 	return choice[random];
 }
+
 function playRound(playerSelection, computerSelection) {
 	let player = playerSelection.toLowerCase();
 	if (player == computerSelection) {
@@ -16,6 +19,12 @@ function playRound(playerSelection, computerSelection) {
 	} else {
 		return "Computer wins";
 	}
-
 }
-console.log(playRound('rock', getComputerChoice()));
+
+function playGame() {
+	for (let i = 0; i < 5; i++) {
+		console.log(playRound(playerChoice, getComputerChoice()));
+	}
+}
+
+playGame();
