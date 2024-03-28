@@ -39,3 +39,8 @@ button {
 button:hover {
 	border-color: var(--highlight);
 }
+
+img {
+	width: 32px;
+	height: 32px;
+}
