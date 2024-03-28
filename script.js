@@ -28,4 +28,6 @@ function playGame() {
 	}
 }
 
-playGame();
+
+
+// playGame();
