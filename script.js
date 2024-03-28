@@ -31,7 +31,7 @@ function playGame() {
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
-
+let outcome = document.querySelector(".result");
 // let choice = document.querySelectorAll('.choice');
 // let playerChoice;
 // choice.forEach(selection => selection.addEventListener("click", () => {
@@ -45,8 +45,13 @@ const scissors = document.querySelector("#scissors");
 // 	playRound(playerChoice, getComputerChoice());
 	
 // }));
+
+function showResult(result) {
+
+}
 rock.addEventListener("click", () => {
 	let result = playRound("rock", getComputerChoice());
 	console.log(result);
+	outcome.textContent = result;
 });
 
