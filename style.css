@@ -8,15 +8,12 @@
 	--althl: #dabfff;
 }
 
-.heading {
-	text-align: center;
-}
-
 body {
 	background-color: var(--bg);
 	color: var(--text);
 	font-family: 'Lora', serif;
   margin: 0;
+  text-align: center;
 }
 
 .row {
@@ -29,6 +26,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	flex: 0 0 30vw;
+	height: 30vh;
 }
 
 button {
@@ -42,7 +41,13 @@ button:hover {
 }
 
 .computer {
+	flex: 0 0 30vw;
+	height: 30vh;
+}
 
+#outcomes {
+	flex: 0 0 30vw;
+	height: 30vh;
 }
 
 img {
