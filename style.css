@@ -6,4 +6,11 @@
 	--highlight: 907ad6;
 	--altText: 4f518c;
 	--althl: dabfff;
-} 
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: 'Lora', serif;
+  	margin: 0;
+}
