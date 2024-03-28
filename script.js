@@ -28,6 +28,12 @@ function playGame() {
 	}
 }
 
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
+let choice = document.querySelectorAll('.choice');
+choice.forEach(selection => selection.addEventListener("click", () => {
+	playGame();
+}));
 
-// playGame();
