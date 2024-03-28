@@ -2,10 +2,20 @@ function getPlayerChoice() {
 	return prompt("Rock, paper, or scissors?").toLowerCase();
 }
 
+let computerImg = document.querySelector("#computerImg");
+
 function getComputerChoice() {
 	const choice = ['rock', 'paper', 'scissors'];
 	const random = Math.floor(Math.random() * choice.length);
-	return choice[random];
+	let result = choice[random];
+	if (result == choice[0]) {
+		computerImg.src = rockImg;
+	} else if (result == choice[1]) {
+		computerImg.src = paperImg;
+	} else if (result == choice[2]) {
+		computerImg.src = scissorsImg;
+	}
+	return result;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -29,9 +39,13 @@ function playGame() {
 }
 
 const rock = document.querySelector("#rock");
+const rockImg = "./images/rock.png";
 const paper = document.querySelector("#paper");
+const paperImg = "./images/paper.png";
 const scissors = document.querySelector("#scissors");
+const scissorsImg = "./images/paper.png";
 let outcome = document.querySelector(".result");
+
 // let choice = document.querySelectorAll('.choice');
 // let playerChoice;
 // choice.forEach(selection => selection.addEventListener("click", () => {
