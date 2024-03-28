@@ -1,7 +1,10 @@
-function getPlayerChoice() {
-	return prompt("Rock, paper, or scissors?").toLowerCase();
-}
-
+const rock = document.querySelector("#rock");
+const rockImg = "./images/rock.png";
+const paper = document.querySelector("#paper");
+const paperImg = "./images/paper.png";
+const scissors = document.querySelector("#scissors");
+const scissorsImg = "./images/scissors.png";
+let outcome = document.querySelector(".result");
 let computerImg = document.querySelector("#computerImg");
 
 function getComputerChoice() {
@@ -32,40 +35,17 @@ function playRound(playerSelection, computerSelection) {
 	}
 }
 
-function playGame() {
-	for (let i = 0; i < 5; i++) {
-		console.log(playRound(getPlayerChoice(), getComputerChoice()));
-	}
-}
-
-const rock = document.querySelector("#rock");
-const rockImg = "./images/rock.png";
-const paper = document.querySelector("#paper");
-const paperImg = "./images/paper.png";
-const scissors = document.querySelector("#scissors");
-const scissorsImg = "./images/paper.png";
-let outcome = document.querySelector(".result");
-
-// let choice = document.querySelectorAll('.choice');
-// let playerChoice;
-// choice.forEach(selection => selection.addEventListener("click", () => {
-// 	if (this == rock) {
-// 		playerChoice = rock;
-// 	} else if (this == paper) {
-// 		playerChoice = paper;
-// 	} else if (this == scissors) {
-// 		playerChoice = scissors;
-// 	}
-// 	playRound(playerChoice, getComputerChoice());
-	
-// }));
-
-function showResult(result) {
-
-}
 rock.addEventListener("click", () => {
 	let result = playRound("rock", getComputerChoice());
-	console.log(result);
 	outcome.textContent = result;
 });
 
+paper.addEventListener("click", () => {
+	let result = playRound("paper", getComputerChoice());
+	outcome.textContent = result;
+});
+
+scissors.addEventListener("click", () => {
+	let result = playRound("scissors", getComputerChoice());
+	outcome.textContent = result;
+});
